@@ -8,7 +8,7 @@ var myChart;
 
 document.getElementById('btnSend').addEventListener('click', () => {
     txtCity = document.getElementById('city').value
-    getResource(txtCity).then(data => data.map(timeStep => Char(timeStep)))
+    getResource(txtCity).then(data => data.forEach(element => {Char(element)}))
         .then(() => {
             paintChar()
             document.getElementById('city').value=""
